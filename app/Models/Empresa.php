@@ -4,6 +4,7 @@ namespace App\Models;
 use App\Model\User;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Empresa extends Model
 {

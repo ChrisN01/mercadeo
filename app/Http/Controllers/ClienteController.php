@@ -41,7 +41,15 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validaciones
+        $this->validate($request, [
+            'ci' => 'required|string|min:7|max:15|alpha_num|unique:personas',
+            'name' => 'required|string|min:7|max:45|alpha_spaces',
+            'direccion' => 'required|string|min:7|max:45',
+            'telefono' => 'required|string|min:11|max:12',
+            'apellido' => 'required|string|min:7|max:45|alpha_spaces',
+            'user_id' => 'integer',
+        ]);
     }
 
     /**

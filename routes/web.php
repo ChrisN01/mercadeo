@@ -25,6 +25,6 @@ Route::post('ObtenerTipoRegistro', 'RegistroController@tipo_registro_seleccionad
 Route::get('RegistroPersonaN', 'RegistroController@registro_clientes')->name('vista_registrar_clientes'); 
 Route::get('RegistroEmpresa', 'RegistroController@registro_empresas')->name('vista_registrar_empresas'); 
 //Ruta de envio de formulario para el registro de clientes
-Route::post('ObtenerRegistroClientes', 'ClienteController@create')->name('registrar_clientes');
+Route::post('ObtenerRegistroClientes', 'ClienteController@store')->name('registro_clientes');
 //Ruta de envio de formulario para el registro de empresas
-Route::post('ObtenerRegistroEmpresas', 'EmpresaController@create')->name('registrar_empresas');
+Route::post('ObtenerRegistroEmpresas', 'EmpresaController@store')->name('registro_empresas');
