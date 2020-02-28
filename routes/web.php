@@ -22,9 +22,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('TipoRegistro', 'RegistroController@index')->name('seleccionar_registro'); 
 //Ruta para verificar el tipo de registro selecionado
 Route::post('ObtenerTipoRegistro', 'RegistroController@tipo_registro_seleccionado')->name('verificar_tipo_registro');
-Route::get('RegistroPersonaN', 'RegistroController@registro_clientes')->name('vista_registrar_clientes'); 
-Route::get('RegistroEmpresa', 'RegistroController@registro_empresas')->name('vista_registrar_empresas'); 
+//Clientes
+Route::get('RegistroPersonaN', 'RegistroController@registro_clientes')->name('vista_registrar_clientes');
 //Ruta de envio de formulario para el registro de clientes
 Route::post('ObtenerRegistroClientes', 'ClienteController@store')->name('registro_clientes');
+Route::get('MostrarClientes', 'ClienteController@show')->name('listado_clientes');
+//Empresa
+Route::get('RegistroEmpresa', 'RegistroController@registro_empresas')->name('vista_registrar_empresas'); 
 //Ruta de envio de formulario para el registro de empresas
 Route::post('ObtenerRegistroEmpresas', 'EmpresaController@store')->name('registro_empresas');

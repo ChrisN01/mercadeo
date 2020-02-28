@@ -22,7 +22,7 @@
                 <div class="card-header bg-primary text-center text-white lead">{{ __('Registrar empresas') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('registrar_empresas') }}" aria-label="{{ __('Register') }}">
+                    <form method="POST" action="{{ route('registro_empresas') }}" aria-label="{{ __('Register') }}">
                         @csrf
                         <div class="form-group input-group">
                             <div class="input-group-prepend">

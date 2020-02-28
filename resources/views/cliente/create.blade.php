@@ -18,11 +18,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
+            @include('partials/errors')
             <div class="card">
                 <div class="card-header bg-primary text-center text-white lead">{{ __('Registrar clientes') }}</div>
-
                 <div class="card-body">
-                    <form method="POST" action="{{ route('registrar_clientes') }}" aria-label="{{ __('Register') }}">
+                    <form method="POST" action="{{ route('registro_clientes') }}" aria-label="{{ __('Register') }}">
                         @csrf
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
@@ -54,11 +54,11 @@
                             <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-address-card"></i> </span>
                             </div>
-                            <input id="ci" type="text" placeholder="CI"class="form-control{{ $errors->has('ci') ? ' is-invalid' : '' }}" name="ci" value="{{ old('ci') }}" required autofocus>
+                            <input id="cedula" type="text" placeholder="cedula"class="form-control{{ $errors->has('cedula') ? ' is-invalid' : '' }}" name="cedula" value="{{ old('cedula') }}" required autofocus>
 
-                                @if ($errors->has('ci'))
+                                @if ($errors->has('cedula'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('ci') }}</strong>
+                                        <strong>{{ $errors->first('cedula') }}</strong>
                                     </span>
                                 @endif
                         </div> <!-- form-group// -->

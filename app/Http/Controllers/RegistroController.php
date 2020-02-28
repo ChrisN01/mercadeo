@@ -38,13 +38,13 @@ class RegistroController extends Controller
 
     public function registro_clientes()
     {
-        return view('auth.register_clientes');
+        return view('cliente.create');
     }
     //Funcion donde se muestra la vista para el registro de empresas
 
     public function registro_empresas()
     {
-        return view('auth.register_empresa');
+        return view('empresa.create');
     }
     /**
      * Show the form for creating a new resource.

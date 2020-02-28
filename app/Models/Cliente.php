@@ -24,4 +24,9 @@ class Cliente extends Model
         'licencia_id',
         'usuario_id'
     ];
+
+    public function user()
+    {
+        return $this->hasOne('App\Models\User');
+    }
 }

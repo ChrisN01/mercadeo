@@ -42,7 +42,7 @@ class User extends Authenticatable
     }
 
     //Relacion uno a uno: Una empresa solo puede tener un usuario
-    public function cliente()
+    public function empresa()
     {
         return $this->hasOne('App\Models\Empresa');
     }
